@@ -1,0 +1,50 @@
+﻿@model UserManagementViewModel
+
+@{
+    ViewData["Title"] = "User Management";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="~/js/userManagement.js"></script>
+
+
+<div id="UserManagementContainer" class="row">
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="text-center">Owners</h3>
+            <div id="owners" class="userContainer">
+                @foreach (var o in Model.Owners)
+                {
+                    <div class="user" data-userid="@o.UserId">@($"{o.FirstName} {o.LastName}")</div>
+                }
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-center">Admins</h3>
+            <div id="admins" class="userContainer">
+                @foreach (var a in Model.Admins)
+                {
+                    <div class="user" data-userid="@a.UserId">@($"{a.FirstName} {a.LastName}")</div>
+                }
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3 class="text-center">Users</h3>
+            <div id="users" class="userContainer">
+                @foreach (var u in Model.Users)
+                {
+                    <div class="user" data-userid="@u.UserId">@($"{u.FirstName} {u.LastName}")</div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">            
+        </div>
+        <div class="col-md-4">
+            <button id="SaveUserRoles" class="btn btn-primary col-md-12">Save User Roles</button>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿[
+  {
+    "outputFile": "wwwroot/scss/site.css",
+    "inputFile": "wwwroot/scss/site.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/scss/layout.css",
+    "inputFile": "wwwroot/scss/layout.scss",
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFile": "wwwroot/scss/usermanagement.css",
+    "inputFile": "wwwroot/scss/usermanagement.scss",
+    "minify": {
+      "enabled": false
+    }
+  }
+]
